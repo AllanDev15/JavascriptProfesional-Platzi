@@ -1,0 +1,19 @@
+{
+  "name": "javascriptprofesional-platzi",
+  "version": "1.0.0",
+  "description": "Curso profesional de Javascript de la escuela de Javascript de Platzi",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AllanDev15/JavascriptProfesional-Platzi.git"
+  },
+  "author": "Allan Atzin Flores De la Serna",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AllanDev15/JavascriptProfesional-Platzi/issues"
+  },
+  "homepage": "https://github.com/AllanDev15/JavascriptProfesional-Platzi#readme"
+}
