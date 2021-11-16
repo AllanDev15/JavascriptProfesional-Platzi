@@ -21,6 +21,10 @@ MediaPlayer.prototype.togglePlay = function () {
   this.media.paused ? this.play() : this.pause();
 };
 
+MediaPlayer.prototype.toggleMute = function () {
+  this.media.muted ? this.unmute() : this.mute();
+};
+
 MediaPlayer.prototype.mute = function () {
   this.media.muted = true;
 };
