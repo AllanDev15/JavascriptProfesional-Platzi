@@ -6,8 +6,23 @@ function MediaPlayer(config) {
 }
 
 MediaPlayer.prototype._initPlugins = function () {
+  /* Al metodo RUN le pasamos un objeto que solo tiene acceso a ciertas
+    propiedades de MediaPlayer(this) no a todas */
+  const player = {
+    play: () => this.play(),
+    pause: () => this.pause(),
+    media: this.media,
+    get muted() {
+      return this.media.muted;
+    },
+
+    set muted(value) {
+      this.media.muted = true;
+    },
+  };
+
   this.plugins.forEach((plugin) => {
-    plugin.run(this);
+    plugin.run(player);
   });
 };
 
