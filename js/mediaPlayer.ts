@@ -1,28 +1,16 @@
 class MediaPlayer {
+  media: HTMLMediaElement;
+  plugins: Array<any>;
+
   constructor(config) {
     this.media = config.element;
     this.plugins = config.plugins || [];
 
-    this._initPlugins();
+    this.initPlugins();
   }
-  _initPlugins() {
-    /* Al metodo RUN le pasamos un objeto que solo tiene acceso a ciertas
-      propiedades de MediaPlayer(this) no a todas */
-    const player = {
-      play: () => this.play(),
-      pause: () => this.pause(),
-      media: this.media,
-      get muted() {
-        return this.media.muted;
-      },
-
-      set muted(value) {
-        this.media.muted = true;
-      },
-    };
-
+  private initPlugins() {
     this.plugins.forEach((plugin) => {
-      plugin.run(player);
+      plugin.run(this);
     });
   }
   play() {

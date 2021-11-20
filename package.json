@@ -2,7 +2,7 @@
   "name": "javascriptprofesional-platzi",
   "version": "1.0.0",
   "description": "Curso profesional de Javascript de la escuela de Javascript de Platzi",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
     "start": "parcel index.html typescript/**/*.html"
   },
